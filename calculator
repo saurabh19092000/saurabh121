@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<style>
+		body{
+			background-image: url(./0.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.container
+		{
+			width: 400px;
+			margin: auto;
+			height: auto;
+		}
+	</style>
+	<div class="container">
+		<h1>MY CALCULATOR</h1>
+	</div>
+
+	<script>
+		function calc()
+		{
+			var n1 = parseInt(document.getElementById('n1').value);
+			var n2 = parseInt(document.getElementById('n2').value);
+			var oper =document.getElementById('operators').value;
+
+			if (oper === '+')
+			{
+             document.getElementById('result').value = n1+n2;
+			}
+			else if (oper === '-')
+			{
+             document.getElementById('result').value = n1-n2;
+			}
+			else if (oper === 'X')
+			{
+             document.getElementById('result').value = n1*n2;
+			}
+			else if (oper === '/')
+			{
+             document.getElementById('result').value = n1/n2;
+			}
+
+		}
+
+	</script>
+</head>
+<body>
+	<input type="text" id="n1"><br/><br/>
+	<input type="text" id="n2"><br/><br/>
+
+	<select id="operators">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">X</option>
+		<option value="/">/</option>
+		
+	</select>
+	<button onclick="calc();">submit</button>
+	<input type="text" id="result">
+	
+
+</body>
+</html>
